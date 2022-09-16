@@ -1,13 +1,21 @@
-var productModule = angular.module('DAGStore.menurecord', ['DAGStore.common']);
+// Register module
+var menuRecordModule = angular.module('DAGStore.menurecord', ['DAGStore.common']);
 
-function config($stateProvider, $urlRouterProvider) {
-    $stateProvider.state('menurecord', {
-        url: "/menurecord",
-        templateUrl: "/app/components/product/menuRecordListView.html",
-        controller: "menuRecordListController"
-    }).state('menurecordadd', {
-        url: "/menurecordadd",
-        templateUrl: "/app/components/product/menuRecordAddView.html",
-        controller: "menuRecordAddController"
+// Config module
+menuRecordModule.config(function($stateProvider, $urlRouterProvider){
+    // Config Router
+    var states = [
+    {
+      name: 'menurecord',
+      url: '/menurecord',
+      templateUrl: '/app/components/menurecord/menuRecordListView.html',
+      // controller: "menuRecordListController"
+    },
+    {
+      name: 'menurecord-add',
+      url: '/menurecord-add',
+      templateUrl: '/app/components/menurecord/menuRecordAddView.html',
+      // controller: "productAddController"
+    }];
+    states.forEach((state) => $stateProvider.state(state));
     });
-}
