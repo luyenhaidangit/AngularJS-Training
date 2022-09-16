@@ -19,7 +19,19 @@
         <!-- App Css-->
         <link href="/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
+        <script src="/assets/libs/angular.js/angular.js"></script>
+        <script src="/assets/libs/angular-ui-router/angular-ui-router.js"></script>
+        <script src="/app/shared/modules/DAGStore.common.js"></script>
+        <script src="/app/shared/services/apiService.js"></script>
+        <script src="/app/components/home/home.module.js"></script>
         
+        <!-- <script src="/app/shared/services/apiService.js"></script> -->
+        <script src="/app/components/menurecord/menuRecord.module.js"></script>
+        <!-- <script src="/app/components/home/homeController.js"></script> -->
+        <script src="/app/components/home/homeController.js"></script>
+        <script src="/app/app.js"></script>
+    
+
 
     </head>
 
@@ -440,6 +452,8 @@
                                 </a>
                             </li>
 
+                           
+
                             <li>
                                 <a ui-sref="menurecord" class=" waves-effect">
                                     <i class="ri-calendar-2-line"></i>
@@ -448,7 +462,7 @@
                             </li>
 
                             <li>
-                                <a ui-sref="menurecord_add" class=" waves-effect">
+                                <a ui-sref="menurecordadd" class=" waves-effect">
                                     <i class="ri-chat-1-line"></i>
                                     <span>Chat</span>
                                 </a>
@@ -468,6 +482,17 @@
                                     <li><a href="ecommerce-checkout.html">Checkout</a></li>
                                     <li><a href="ecommerce-shops.html">Shops</a></li>
                                     <li><a href="ecommerce-add-product.html">Add Product</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-mail-send-line"></i>
+                                    <span>Menu</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="email-inbox.html">Inbox</a></li>
+                                    <li><a href="email-read.html">Read Email</a></li>
                                 </ul>
                             </li>
                 
@@ -667,9 +692,9 @@
                 <div class="page-content">
                     <div class="container-fluid">
 
-                        <ui-view>
+                        <div ui-view>
 
-                        </ui-view>
+                        </div>
 
                         
 
@@ -749,28 +774,17 @@
 
         <!-- JAVASCRIPT -->
 
-        
-        
-        <!-- <script src="/app/components/home/homeController.js"></script> -->
-        
         <script src="/assets/libs/jquery/jquery.min.js"></script>
+        
+
+
+        
         <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="/assets/libs/metismenu/metisMenu.min.js"></script>
         <script src="/assets/libs/simplebar/simplebar.min.js"></script>
         <script src="/assets/libs/node-waves/waves.min.js"></script>
+
         <script src="/assets/js/app.js"></script>
-
-
-
-        
-        <script src="/assets/libs/angular.js/angular.js"></script>
-        <script src="/assets/libs/angular-ui-router/angular-ui-router.js"></script>
-        <script src="/app/shared/modules/DAGStore.common.js"></script>
-        <script src="/app/app.js"></script>
-       
-        <!-- <script src="/app/shared/services/apiService.js"></script> -->
-        <script src="/app/components/menurecord/menuRecord.module.js"></script>
-         <!-- <script src="/app/components/home/homeController.js"></script> -->
 
         
 

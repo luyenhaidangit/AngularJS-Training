@@ -5,10 +5,9 @@ function config($stateProvider, $urlRouterProvider) {
         url: "/menurecord",
         templateUrl: "/app/components/product/menuRecordListView.html",
         controller: "menuRecordListController"
-    })
-    .state('menunecord_add', {
-        url: "/menunecord_add",
-        templateUrl: "/app/components/menurecord/menuRecordAddView.html",
+    }).state('menurecordadd', {
+        url: "/menurecordadd",
+        templateUrl: "/app/components/product/menuRecordAddView.html",
         controller: "menuRecordAddController"
     });
 }

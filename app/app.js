@@ -7,7 +7,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     name: 'home',
     url: '/home',
     templateUrl: '/app/components/home/homeView.html',
-    controller: "homeController",
+    // controller: "homeController",
   },
   {
     name: 'menurecord',
@@ -16,8 +16,8 @@ app.config(function($stateProvider, $urlRouterProvider){
     // controller: "menuRecordListController"
   },
   {
-    name: 'menurecord_add',
-    url: '/menurecord_add',
+    name: 'menurecordadd',
+    url: '/menurecordadd',
     templateUrl: '/app/components/menurecord/menuRecordAddView.html',
     // controller: "productAddController"
   },
@@ -30,3 +30,10 @@ app.config(function($stateProvider, $urlRouterProvider){
   states.forEach((state) => $stateProvider.state(state));
   $urlRouterProvider.otherwise('/');
   });
+
+app.controller('homeController', function($scope) {
+  $scope.firstName = "John";
+  $scope.lastName = "Doe";
+});
+
+

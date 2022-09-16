@@ -1,6 +1,6 @@
-var productAddController = angular.module('DAGStore.menurecord', [])
-  .controller('menuRecordAddController', menuRecordAddController);
+var productAddController = angular.module('DAGStore.product', [])
+  .controller('productAddController', productListController);
 
-function menuRecordAddController(){
+function productListController(){
 
 }

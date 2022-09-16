@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="homeController">
     <!-- start page title -->
     <div class="row">
         <div class="col-12">
@@ -15,6 +15,17 @@
             </div>
     </div>
 </div>
+
+
+<script>
+    var app = angular.module('myApoller', []);
+    app.controller('homeController', function($scope) {
+      $scope.firstName = "John";
+      $scope.lastName = "Doe";
+    });
+</script>
+
+
   
 
 
