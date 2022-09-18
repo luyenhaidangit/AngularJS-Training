@@ -22,7 +22,7 @@
         "Name": "Footer Service",
         "Template": "LinkList",
         "WidgetZone": null,
-        "Published": true,
+        "Published": false,
         "DisplayOrder": 1,
         "MenuItemRecords": []
     },

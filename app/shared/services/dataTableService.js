@@ -12,6 +12,8 @@
         }
 
         function createDefaultTable() {
+            
+
             angular.element(document).ready(function() { 
                 $.fn.dataTable.ext.errMode = 'none';
                 
