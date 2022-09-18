@@ -17,7 +17,7 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: '/app/components/error/errorView.html'
     }];
     states.forEach((state) => $stateProvider.state(state));
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/home');
     });
 
 

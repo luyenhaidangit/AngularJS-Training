@@ -1,0 +1,47 @@
+[
+    {
+        "ID": 1,
+        "Name": "Main Navigation",
+        "Template": "Navbar",
+        "WidgetZone": null,
+        "Published": true,
+        "DisplayOrder": 1,
+        "MenuItemRecords": []
+    },
+    {
+        "ID": 2,
+        "Name": "Footer Infomation",
+        "Template": "LinkList",
+        "WidgetZone": null,
+        "Published": true,
+        "DisplayOrder": 1,
+        "MenuItemRecords": []
+    },
+    {
+        "ID": 3,
+        "Name": "Footer Service",
+        "Template": "LinkList",
+        "WidgetZone": null,
+        "Published": true,
+        "DisplayOrder": 1,
+        "MenuItemRecords": []
+    },
+    {
+        "ID": 4,
+        "Name": "Footer Company",
+        "Template": "LinkList",
+        "WidgetZone": null,
+        "Published": true,
+        "DisplayOrder": 1,
+        "MenuItemRecords": []
+    },
+    {
+        "ID": 5,
+        "Name": "Help And Service",
+        "Template": "Dropdown",
+        "WidgetZone": null,
+        "Published": true,
+        "DisplayOrder": 1,
+        "MenuItemRecords": []
+    }
+]
