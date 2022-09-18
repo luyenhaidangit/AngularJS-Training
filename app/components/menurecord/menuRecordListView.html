@@ -20,7 +20,7 @@
                     provides the based framework upon which plug-ins can built.
                 </p> -->
 
-                <table datatable="ng" dt-options="dtOptions" dt-columns="dtColumns" id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                <table datatable="ng" dt-options="dtOptions" dt-columns="dtColumns" id="DAGStoreDatatable" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -33,10 +33,10 @@
                     </thead>
 
 
-                    <tbody ng-controller="menuRecordListController">
-                        <p>{{menuRecords}}</p>
-                        <p>{{menuRecords1}}</p>
-                        <tr ng-repeat="item in menuRecords1">
+                    <tbody id="content" ng-controller="menuRecordListController">
+                        <!-- <p>{{menuRecords}}</p>
+                        <p>{{menuRecords1}}</p> -->
+                        <tr ng-repeat="item in menuRecords">
                             <td>{{item.ID}}</td>
                             <td>{{item.Name}}</td>
                             <td>{{item.Template}}</td>
@@ -45,7 +45,8 @@
                             <td>{{item.DisplayOrder}}</td>
                         </tr>
 
-                       
+                        <!-- {{menuRecords.draw()}} -->
+                        
                     </tbody>
                 </table>
             </div>
@@ -76,4 +77,4 @@
 <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
 <!-- Datatable init js -->
-<script src="assets/js/pages/datatables.init.js"></script>
+<!-- <script src="assets/js/pages/datatables.init.js"></script> -->

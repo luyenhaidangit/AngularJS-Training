@@ -1,42 +1,37 @@
-
-
-//Register controller
-// var menuRecord = angular.module('DAGStore.menurecord','apiService');
-
-// menuRecord.controller('menuRecordListController', menuRecordListController);
-
-// function menuRecordListController(){
-
-// }
-// console.log(menuRecord);
-
-// // menuRecordList.controller('menuRecordListController', menuRecordListController);
-
-// // Controller
-// function menuRecordListController($scope){
-//     $scope.menuRecord = [];
-
-//     $scope.getMenuRecord = getMenuRecord;
-
-//     function getMenuRecord(){
-//       apiService.get("https://localhost:44359/menurecord",null,function(result){
-//           $scope.menuRecord = result.data;
-//       },function(){
-//           console.log("Lấy dữ liệu thất bại");
-//       });
-//     }
-
-
-//     $scope.getMenuRecord();
-// }
-
-// var listMenuRecordController = angular.module('DAGStore.menurecord', ['DAGStore.common'])
-
 // Register controller
-// var app1 = angular.module('DAGStore.menurecord');
-// app1.controller('menuRecordListController', menuRecordListController);
+var menuRecord = angular.module('DAGStore.menurecord');
+menuRecord.controller('menuRecordListController', menuRecordListController);
 
-// // Controller
-// function menuRecordListController(){
+// Controller
+function menuRecordListController($scope,apiService,dataTableService){
 
-// }
+    // $scope.menuRecords = [];
+    $scope.menuRecords = "";
+
+
+    $scope.getItems = function getItems(){
+        apiService.get("/data/menurecord.data.json",null,function(result){
+        
+
+        
+        $scope.menuRecords = result.data;
+
+
+        
+        dataTableService.createDefaultTable();
+        
+        
+        
+        console.log($scope.menuRecords)
+ 
+      },function(error){
+        console.log("Get data fail");
+      })
+    };
+
+   
+
+    $scope.getItems();
+
+    
+}
