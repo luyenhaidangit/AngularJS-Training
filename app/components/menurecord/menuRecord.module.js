@@ -12,10 +12,10 @@ menuRecord.config(function($stateProvider, $urlRouterProvider){
       controller: "menuRecordListController",
     },
     {
-      name: 'menurecord-add',
-      url: '/menurecord-add',
+      name: 'menu-record-add',
+      url: '/menu-record-add',
       templateUrl: '/app/components/menurecord/menuRecordAddView.html',
-      // controller: "productAddController"
+      controller: "menuRecordAddController",
     }];
     states.forEach((state) => $stateProvider.state(state));
     });

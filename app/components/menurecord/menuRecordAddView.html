@@ -1,1 +1,81 @@
-<h1>alfksd</h1>
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-flex align-items-center justify-content-between">
+            <h4 class="mb-0">Menus</h4>
+
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">DAGStore</a></li>
+                    <li class="breadcrumb-item"><a ui-sref="menurecord">Menus</a></li>
+                    <li class="breadcrumb-item active"><a ui-sref="menu-record-add"></a>Thêm mới</li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <form class="form-horizontal" novalidate name="formAddMenuRecord" role="form" ng-submit="AddMenuRecord()">
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-md-2 col-form-label">Tên Menu</label>
+                        <div class="col-md-10">
+                            <input ng-model="menuRecord.Name" name="name" class="form-control" type="text" value="" id="example-text-input">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Template</label>
+                        <div class="col-md-10">
+                            <select ng-options="option.name for option in menuRecord.Templates track by option.id" ng-model="menuRecord.Template" name="template" class="form-control">
+                               
+                            </select>
+                            <input type="hidden" name="template" ng-model="menuRecord.Template">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Vùng hiển thị</label>
+                        <div class="col-md-10">
+                            <select class="custom-select" ng-options="option.name for option in menuRecord.WidgetZones track by option.id" ng-model="menuRecord.WidgetZone" name="widgetzone">
+                                <!-- <option selected>Bấm để lựa chọn</option>
+                                <option value="1">home_page_top</option>
+                                <option value="2">home_page_after_intro</option>
+                                <option value="3">content_before</option> -->
+                            </select>
+                            <input type="hidden" name="widgetzone" ng-model="menuRecord.WidgetZone">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="example-number-input" class="col-md-2 col-form-label">Độ ưu tiên</label>
+                        <div class="col-md-10">
+                            <input ng-model="menuRecord.DisplayOrder" name="displayorder" class="form-control" type="number" value="1" id="example-number-input">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row d-flex align-items-cente">
+                        <label for="example-number-input" class="col-md-2 col-form-label">Hoạt động</label>
+                        <!-- <label for="example-number-input" class="col-md-2 col-form-label">Độ ưu tiên</label> -->
+                        <div class="col-md-10 d-flex align-items-center">
+                            <input type="checkbox" id="switch1" switch="none" checked="" ng-model="menuRecord.Published" ng-checked="menuRecord.Published">
+                            <label class="mr-0" for="switch1" data-on-label="On" data-off-label="Off"></label>
+                        </div>
+                    </div>
+    
+                    <div class="add-btn mb-4 d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary waves-effect waves-light" href="#!/menu-record-add">Xác nhận</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+<!-- end row -->
